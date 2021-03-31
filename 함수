@@ -1,0 +1,10 @@
+1
+
+#1번 문제
+number=int(input())
+a_list=[]
+for i in range(number):
+    a_list.append(int(input()))
+a_list.sort()
+for i in range(len(a_list)):
+    print(a_list[i])
