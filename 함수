@@ -1,6 +1,7 @@
-1
-
+==========================================================================
 #1번 문제
+==========================================================================
+
 number=int(input())
 a_list=[]
 for i in range(number):
@@ -8,3 +9,33 @@ for i in range(number):
 a_list.sort()
 for i in range(len(a_list)):
     print(a_list[i])
+a_set=set()
+b_list=[]
+for i in range(1,100):
+    a_set.add(i)
+for i in range(10):
+    for l in range(5):
+        number=int(str(i)+str(i+l)+str(i+l+l))
+        if 0<number<1000:
+            a_set.add(number)
+==========================================================================
+#3번문제
+==========================================================================
+
+for i in range(10):
+    for l in range(6):
+        try:
+            number2=int(str(10-i)+str(10-i-l)+str(10-i-l-l))
+            if 0<number2<1000:
+                a_set.add(number2)
+        except:
+            pass
+count=0
+for i in a_set:
+    b_list.append(i)
+number=int(input())
+for i in range(len(b_list)):
+    if number>=b_list[i]:
+        count+=1
+print(count)
+==========================================================================
