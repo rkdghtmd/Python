@@ -1,0 +1,17 @@
+#6번 문제
+=====================================================
+number=int(input())
+
+for i in range(number):
+  number1=0
+  string=list(input())
+  count=0
+  for l in string:
+    if l == "O":
+      count+=1
+      number1+=count
+    else:
+      count=0
+  print(number1)
+=====================================================
+  
