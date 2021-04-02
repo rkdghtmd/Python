@@ -6,3 +6,18 @@ for i in range(ord("a"),ord("z")+1):
 ==================================================================
 number=input()
 print(*map(number.find,map(chr,range(ord("a"),ord("z")+1))))
+==================================================================
+#5번 문제
+==================================================================
+string=list(input().upper())
+a_list=[]
+b_list=[]
+for i in set(string):
+  a_list.append(string.count(i))
+for l in set(string):  
+  if max(a_list)==string.count(l):
+    b_list.append(l)
+if len(b_list)==1:
+    print(b_list[0])
+else:
+  print("?")
