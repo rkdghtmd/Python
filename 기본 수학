@@ -1,0 +1,7 @@
+#1번 문제
+======================================================================================
+number=list(map(int,input().split()))
+if number[2]-number[1]>0:
+    print(number[0]//(number[2]-number[1])+1)
+else:
+  print("-1")
