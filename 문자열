@@ -21,3 +21,30 @@ if len(b_list)==1:
     print(b_list[0])
 else:
   print("?")
+==================================================================
+#8번 문제
+==================================================================
+def change(number):
+  count=0
+  if number in ["A","B","C"]:
+    count+=3
+  if number in ["D","E","F"]:
+    count+=4
+  if number in ["G","H","I"]:
+    count+=5
+  if number in ["J","K","L"]:
+    count+=6
+  if number in ["M","N","O"]:
+    count+=7
+  if number in ["P","Q","R","S"]:
+    count+=8
+  if number in ["T","U","V"]:
+    count+=9
+  if number in ["W","X","Y","Z"]:
+    count+=10
+  return count
+string=input()
+number=0
+for i in string:
+  number+=change(i)
+print(number)
