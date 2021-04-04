@@ -17,6 +17,20 @@ for i in string:
         zero+=1
 print(zero)  
 ===========================================
+#3번 문제
+===========================================
+number=int(input())
+i=2
+if number==1:
+    pass
+else:    
+    while number!=1:
+        if number%i==0:
+            print(i)
+            number/=i
+        else:
+            i+=1
+===========================================
 #7번 
 ===========================================
 a_list=list(map(int,input().split()))
