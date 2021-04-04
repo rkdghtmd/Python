@@ -1,4 +1,24 @@
 ===========================================
+#8번 
+===========================================
+a_list=[]
+b_list=[]
+answer=[]
+for i in range(3):
+    number=list(map(int,input().split()))
+    a_list.append(number[0])
+    b_list.append(number[1])
+count=0
+for i in a_list:
+    if a_list.count(i)==1:
+        answer.append(i)
+count2=0
+for i in b_list:
+    if b_list.count(i) ==1:
+        answer.append(i)
+
+print(answer[0],answer[1])
+===========================================
 #9번 문제
 ==============================================
 def pita (first,second,third):
