@@ -21,6 +21,19 @@ force=list(map(int,sys.stdin.readline().split()))
 number=math.ceil((force[2]-force[0])/(force[0]-force[1]))
 print(number+1)
 ==============================================================================
+#5번 
+==============================================================================
+a_list=[]
+N=int(input())
+for i in range(N):
+    inf=list(map(int,input().split()))
+    if inf[2]%inf[0]!=0:
+        a_list.append(str(inf[2]%inf[0])+str((inf[2]//inf[0])+1).zfill(2))
+    else:
+        a_list.append(str(inf[0])+str((inf[2]//inf[0])).zfill(2))
+
+for i in a_list:
+    print(i)
 =============================================================================
 #8번 문제
 ==============================================================================
