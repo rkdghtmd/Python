@@ -1,4 +1,22 @@
 ===========================================
+#1번 
+===========================================
+a_list=[]
+for i in range(1,1001):
+    count=0
+    for l in range(1,1001):
+        if i%l == 0 and i >= l:
+            count+=1
+    if count==2:
+        a_list.append(i)
+number=int(input())
+string=list(map(int,input().split(maxsplit=number)))
+zero=0
+for i in string:
+    if a_list.count(i)==1:
+        zero+=1
+print(zero)  
+===========================================
 #7번 
 ===========================================
 a_list=list(map(int,input().split()))
