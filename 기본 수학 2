@@ -1,1 +1,25 @@
+===========================================
+#9번 문제
+==============================================
+def pita (first,second,third):
+    count=0
+    if first**2 == second**2 + third**2:
+        count+=1
 
+    if second**2 == first**2 + third**2:
+        count+=1
+
+    if third**2 == second**2 + first**2:
+        count+=1
+
+    if first + second + third == 0:
+        count+=2
+
+    return count
+N=list(map(int,input().split()))
+while pita(N[0],N[1],N[2]) != 5:
+    if pita(N[0],N[1],N[2])==1:
+        print("right")
+    else:
+        print("wrong")    
+    N=list(map(int,input().split()))
