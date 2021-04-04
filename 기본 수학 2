@@ -1,4 +1,17 @@
 ===========================================
+#7번 
+===========================================
+a_list=list(map(int,input().split()))
+if a_list[0]>a_list[2]-a_list[0]:
+    a_list.append(a_list[2]-a_list[0])
+else:
+    a_list.append(a_list[0])
+if a_list[1]>a_list[3]-a_list[1]:
+    a_list.append(a_list[3]-a_list[1])
+else:
+    a_list.append(a_list[1])
+print(min(a_list))
+===========================================
 #8번 
 ===========================================
 a_list=[]
