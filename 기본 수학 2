@@ -17,6 +17,32 @@ for i in string:
         zero+=1
 print(zero)  
 ===========================================
+#2번 
+===========================================
+def function (num1,num2):
+    a_list=[]
+    for x in range (num1,num2+1):
+        count=0
+        l=2
+        while count==0 and l<x:
+            if x%l == 0:
+                count+=1
+            else:
+                l+=1
+        if count==0:
+            a_list.append(x)
+    if len(a_list) !=0:
+        print(sum(a_list))
+        print(min(a_list))
+    else:
+        print('-1')
+number1=int(input())
+number2=int(input())
+if number1 == 1 :
+    function(number1+1,number2)
+else:
+    function(number1,number2)
+===========================================
 #3번 문제
 ===========================================
 number=int(input())
