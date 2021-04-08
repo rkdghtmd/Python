@@ -1,0 +1,19 @@
+#1번 문제
+while 1:
+    a,b=map(int,input().split())
+    if a+b==0:
+        break
+    print(a+b)
+    
+a,b = map(int,input().split())
+while a+b !=0:
+    print(a+b)
+    a,b = map(int,input().split())
+    
+#2번 문제
+try:
+    while 1:
+        string=list(map(int,input().split()))
+        print(sum(string))
+except:
+    pass
