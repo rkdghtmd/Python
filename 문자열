@@ -60,3 +60,20 @@ string=input()
 for l in b_list:
   string=string.replace(l,"*")
 print(len(string))
+==================================================================
+#10번 
+==================================================================
+
+number=int(input())
+answer=0
+for i in range(number):
+    string=input()
+    for l in range(len(string)):
+        if l <len(string)-1:
+            if string[l]==string[l+1]:
+                pass
+            elif string[l] in string[l+1:]:
+                break
+        else:
+            answer+=1
+print(answer)
