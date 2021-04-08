@@ -57,6 +57,21 @@ else:
         else:
             i+=1
 ===========================================
+#4번 
+===========================================
+def function(num):
+    if num==1:
+        return False
+    else:
+        for i in range(2,int(num**0.5)+1):
+            if num%i==0:
+                return False
+        return True
+            
+M,N=list(map(int,input().split()))
+for i in range(M,N+1):
+    if function(i):
+        print(i)
 #7번 
 ===========================================
 a_list=list(map(int,input().split()))
