@@ -78,3 +78,14 @@ import sys
 number=list(map(int,sys.stdin.readline().split()))
 print(sum(number))
 ==============================================================================
+#9번 문제
+==============================================================================
+number=int(input())
+for i in range(number):
+    a,b=list(map(int,input().split()))
+    num=b-a
+    k=int((num-0.5)**0.5)
+    if k**2< num < k**2+k+1:
+        print(2*k)
+    else:
+        print(2*k+1)
