@@ -7,6 +7,15 @@ for i in range(9):
 print(max(number_list))
 print(number_list.index(max(number_list))+1)
 =====================================================
+#3번 문제
+=====================================================
+a = int(input())
+b = int(input())
+c = int(input())
+number = str(a * b * c)
+for i in range(0,10):
+    print(number.count(str(i)))
+=====================================================
 #6번 문제
 =====================================================
 number=int(input())
