@@ -136,3 +136,29 @@ import math
 radius=int(input())
 print((radius**2)*math.pi)
 print((radius**2)*2)
+===========================================
+#11번 문제
+===========================================
+number = int ( input() )
+for i in range ( number ):
+    x1,y1,r1,x2,y2,r2 = list ( map ( int , input().split() ) )
+    distance = ( (x1-x2)**2 + (y1-y2)**2 ) **0.5
+    if distance%1 != 0 :
+        if abs(r1-r2) < distance < r1 +r2 :
+            print(2)
+        else:
+            print(0)
+    else:
+        distance = int ( distance )
+        if distance != 0:
+            if r1+r2 == distance or abs ( r1 - r2 ) == distance:
+                print(1)
+            elif abs (r1 - r2) < distance < r1 + r2 :
+                print(2)
+            elif not (abs (r1 - r2) <= distance <= r1 + r2 ):
+                print(0) 
+        else:
+            if r1==r2:
+                print(-1)
+            else:
+                print(0)
