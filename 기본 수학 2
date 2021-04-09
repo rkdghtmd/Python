@@ -129,3 +129,10 @@ while pita(N[0],N[1],N[2]) != 5:
     else:
         print("wrong")    
     N=list(map(int,input().split()))
+===========================================
+#10번 문제
+===========================================
+import math
+radius=int(input())
+print((radius**2)*math.pi)
+print((radius**2)*2)
