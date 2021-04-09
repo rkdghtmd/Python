@@ -43,6 +43,17 @@ for i in range(N):
 for i in a_list:
     print(i)
 =============================================================================
+#6번 문제
+=============================================================================
+number=int(input())
+for i in range(number):
+    floor=int(input())
+    room=int(input())
+    room_list=[ l for l in range(1,room+1)]
+    for k in range(floor):
+        for t in range(room-1):
+            room_list[t+1]+=room_list[t]
+    print(room_list[room-1])    
 #7번 문제
 =============================================================================
 number=int(input())
