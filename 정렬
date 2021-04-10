@@ -1,0 +1,34 @@
+======================================================
+#1번 문제
+======================================================
+def bubble_sort(arr):
+    for i in range(len(arr)-1,0,-1):
+        for l in range(i):
+            if arr[l]>arr[l+1]:
+                arr[l],arr[l+1]=arr[l+1],arr[l]
+a_list=[]
+number=int(input())
+for i in range(number):
+    a_list.append(int(input()))
+bubble_sort(a_list)
+for l in a_list:
+   print(l)
+======================================================
+def selection_sort(arr):
+    for i in range(len(arr)-1):
+        selction=i
+        for l in range(i,len(arr)):
+            if arr[l]<arr[selction]:
+                selction=l
+        arr[i],arr[selction]=arr[selction],arr[i]
+number = int (input ())
+a_list=[]
+for i in range (number ):
+    a_list. append (int (input ()))
+selection_sort(a_list)
+for i in a_list:
+    print(i)
+======================================================
+#2번 문제
+======================================================
+   
