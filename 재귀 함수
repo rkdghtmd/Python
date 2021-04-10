@@ -15,7 +15,17 @@ for i in range(1,number+1):
 print(num)
 ================================================================================
 #2번 문제
+================================================================================
 N_list=[0,1]
 number=int(input())
 N_list.extend(N_list[i]+N_list[i+1] for i in range(number))
 print(N_list[number])
+================================================================================
+def pibonachi (number ):
+    if number == 0:
+        return 0
+    if number == 1:
+        return 1
+    return pibonachi (number-1)+ pibonachi(number-2)
+number=int(input())
+print(pibonachi(number))
