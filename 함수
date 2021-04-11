@@ -41,6 +41,32 @@ answer_list.sort()
 for i in answer_list:
     print(i)
 ==========================================================================
+number_list=[i for i in range(1,10000)]
+noanswer_list=[]
+for i in number_list:
+    if i<10:
+        noanswer_list.append(i*2)
+    elif 9<i<100:
+        noanswer_list.append(i//10+i%10+i)
+    elif 99<i<1000:
+        noanswer_list.append(i//100+(i%100)//10+(i%10)+i)
+    elif 999<i<10000:
+        noanswer_list.append(i//1000+(i%1000)//100+(i%100)//10+(i%10)+i)
+answer_list=[i for i in number_list if i not in noanswer_list]
+for i in answer_list:
+    print(i)
+==========================================================================
+number_set=set([i for i in range(1,10001)])
+answer_set =set()
+for i in number_set:
+    for j in str(i):
+        i+=int(j)
+    answer_set.add(i)
+answer_list=list(number_set - answer_set)
+answer_list.sort()
+for i in answer_list:
+    print(i)
+==========================================================================
 #3번문제
 ==========================================================================
 
