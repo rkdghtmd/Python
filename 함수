@@ -19,6 +19,28 @@ for i in range(10):
         if 0<number<1000:
             a_set.add(number)
 ==========================================================================
+#2번 문제
+==========================================================================
+number_list=[i for i in range(1,10001)]
+a_set=set()
+for i in number_list:
+    if i >999:
+        string=str(i)
+        a_set.add(int(string[0])+int(string[1])+int(string[2])+int(string[3])+i)
+    elif i >99:
+        string=str(i)
+        a_set.add(int(string[0])+int(string[1])+int(string[2])+i)
+    elif 9<i<100:
+        string=str(i)
+        a_set.add(int(string[0])+int(string[1])+i)
+    elif i < 10:
+        a_set.add(2*i)        
+number_set=set(number_list)
+answer_list=list(number_set - a_set)
+answer_list.sort()
+for i in answer_list:
+    print(i)
+==========================================================================
 #3번문제
 ==========================================================================
 
