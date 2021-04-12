@@ -46,4 +46,34 @@ for i in range(number):
       count=0
   print(number1)
 =====================================================
-  
+  def number(string):
+    point=0
+    count=0
+    for i in range(len(string)):
+        if string[i]=="O":
+            count+=1
+        else:
+            count=0
+        point+=count
+    return point
+number1=int(input())
+number_list=[input() for i in range(number1)]
+answer_list=[ number(i) for i in number_list]
+for i in answer_list:
+    print(i)
+=====================================================
+  def number(string):
+    point=0
+    count=0
+    for i in range(len(string)):
+        if string[i]=="O":
+            count+=1
+        else:
+            count=0
+        point+=count
+    return point
+number1=int(input())
+number_list=[input() for l in range(number1)]
+number_list=list(map(number,number_list))
+for i in number_list1:
+    print(i)
