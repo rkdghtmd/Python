@@ -22,6 +22,14 @@ a_set=set()
 for i in range(10):
     a_set.add(int(input())%42)
 print(len(a_set))
+=====================================================
+#5번 문제
+=====================================================
+number=int(input())
+number_list=list(map(int,input().split()))
+number_list=[i/max(number_list)*100 for i in number_list]
+print(sum(number_list)/number)
+=====================================================
 #6번 문제
 =====================================================
 number=int(input())
