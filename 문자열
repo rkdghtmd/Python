@@ -7,6 +7,17 @@ for i in range(ord("a"),ord("z")+1):
 number=input()
 print(*map(number.find,map(chr,range(ord("a"),ord("z")+1))))
 ==================================================================
+number=int(input())
+string=input()
+l=0
+for i in string:
+    l+=int(i)
+print(l)
+==================================================================
+number=int(input())
+string=input()
+print(sum(list(map(int,list(string)))))
+==================================================================
 #5번 문제
 ==================================================================
 string=list(input().upper())
