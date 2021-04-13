@@ -13,3 +13,37 @@ for i in range(len(number_list)-2):
                 answer=ass
 print(M-answer)
 ==================================================================================
+N,M=list(map(int,input().split()))
+chess_list=[input() for i in range(N) ]
+answer=65
+for i in range(N-7):
+    for l in range(M-7):
+        count=0
+        for j in range(4):
+            for k in range(4):
+                if chess_list[i+2*j+1][l+2*k]=="B":
+                    count+=1
+                if chess_list[i+2*j+1][l+2*k+1]=="W":
+                    count+=1
+                if chess_list[i+2*j][l+2*k]=="W":
+                    count+=1
+                if chess_list[i+2*j][l+2*k+1]=="B":
+                    count+=1
+        if answer>count:
+            answer=count
+for i in range(N-7):
+    for l in range(M-7):
+        count=0
+        for j in range(4):
+            for k in range(4):
+                if chess_list[i+2*j+1][l+2*k]=="W":
+                    count+=1
+                if chess_list[i+2*j+1][l+2*k+1]=="B":
+                    count+=1
+                if chess_list[i+2*j][l+2*k]=="B":
+                    count+=1
+                if chess_list[i+2*j][l+2*k+1]=="W":
+                    count+=1
+        if answer>count:
+            answer=count
+print(answer)
