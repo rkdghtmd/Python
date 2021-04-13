@@ -77,3 +77,16 @@ number_list=[input() for l in range(number1)]
 number_list=list(map(number,number_list))
 for i in number_list1:
     print(i)
+=====================================================
+#7번 문제
+=====================================================
+    number=int(input())
+for i in range(number):
+    count=0
+    string=list(map(int,input().split()))
+    average=sum(string[1:])/len(string[1:])
+    for i in string[1:]:
+        if i >average:
+            count+=1 
+    N=count/len(string[1:])*100
+    print(f'{N:.3f}%')
