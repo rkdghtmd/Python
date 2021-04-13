@@ -47,3 +47,16 @@ for i in range(N-7):
         if answer>count:
             answer=count
 print(answer)
+==================================================================================
+#5번 분제
+==================================================================================
+a_list=[]
+i=0
+l=0
+while i<10000:
+    l+=1
+    if "666" in str(l):
+        a_list.append(l)
+        i+=1
+number=int(input())
+print(a_list[number-1])
