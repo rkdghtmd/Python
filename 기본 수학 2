@@ -72,6 +72,24 @@ M,N=list(map(int,input().split()))
 for i in range(M,N+1):
     if function(i):
         print(i)
+============================================
+#6번 문제
+============================================
+number_list=[2,3]
+for i in range(3,10000):
+    for l in range(2,int(i**0.5)+1):
+        if i%l==0:
+            break
+        elif l == int(i**0.5):
+            number_list.append(i)
+number=int(input())
+for i in range(number):
+    N=int(input())
+    for l in range((N+1)//2,N):
+        if (N-l in number_list) and (l in number_list):
+            print(N-l,l)
+            break
+===========================================
 #7번 
 ===========================================
 a_list=list(map(int,input().split()))
