@@ -67,3 +67,14 @@ def factorial(n):
         return 1
     return n*factorial(n-1)
 print(factorial(N)//(factorial(K)*factorial(N-K)))
+=======================================================================
+#9번 문제
+=======================================================================
+def factorial(n):
+    if n==0:
+        return 1
+    return n*factorial(n-1)
+number=int(input())
+for i in range(number):
+    K,N=list(map(int,input().split()))
+    print(factorial(N)//(factorial(K)*factorial(N-K)))
