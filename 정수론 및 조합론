@@ -1,4 +1,6 @@
+=======================================================================
 #1번 문제
+=======================================================================
 a,b=list(map(int,input().split()))
 while a+b!=0:
     if b%a==0:
@@ -8,3 +10,18 @@ while a+b!=0:
     else:
         print("neither")
     a,b=list(map(int,input().split()))
+=======================================================================
+#3번 문제
+=======================================================================
+def gcd(a,b):
+    if a%b==0:
+        return b
+    if b%a==0:
+        return a
+    if a>b:
+        return gcd(b,a%b)
+    elif a<b:
+        return gcd(a,b%a)
+first,second=list(map(int,input().split()))
+print(gcd(first,second))
+print(first*second//gcd(first,second))
