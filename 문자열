@@ -43,6 +43,20 @@ if len(b_list)==1:
 else:
   print("?")
 ==================================================================
+string=input().upper()
+l=0
+count=0
+for i in set(string):
+    if string.count(str(l)) < string.count(i):
+        l=i
+for i in set(string):
+    if string.count(i)==string.count(l):
+        count+=1
+if count==1:
+    print(l)
+else:
+    print("?")
+==================================================================
 #8번 문제
 ==================================================================
 def change(number):
