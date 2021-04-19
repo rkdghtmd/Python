@@ -43,6 +43,22 @@ if len(b_list)==1:
 else:
   print("?")
 ==================================================================
+l=0
+count=0
+answer=""
+string=input().upper()
+for i in range(ord("A"),ord("Z")+1):
+    if l <string.count(chr(i)):
+        l =	 string.count(chr(i))
+for k in range(ord("A"),ord("Z")):
+    if string.count(chr(k))==l:
+        count+=1
+        answer=k
+if count==1:
+    print(chr(answer))
+else:
+    print("?")
+==================================================================
 string=input().upper()
 l=0
 count=0
