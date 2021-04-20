@@ -29,3 +29,27 @@ def pibonachi (number ):
     return pibonachi (number-1)+ pibonachi(number-2)
 number=int(input())
 print(pibonachi(number))
+================================================================================
+#3번 
+================================================================================
+number=int(input())
+maxnumber=int(number**(1/3))
+answer_list=[[] for i in range(maxnumber)]
+string_list=[["*"]*number for i in range(number)]
+times=0
+while times != maxnumber:
+    if times==0:
+        for i in range(number):
+            if i%3==1:
+                answer_list[0].append(i)
+    else:
+        for i in range(number):
+            if (i//(3**times))%3==1:
+                answer_list[times].append(i)
+    times+=1
+for i in range(len(answer_list)):
+    for l in answer_list[i]:
+        for k in answer_list[i]:
+            string_list[l][k]=" "
+for i in string_list:
+    print("".join(i))
