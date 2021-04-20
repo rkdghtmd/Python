@@ -53,3 +53,18 @@ for i in range(len(answer_list)):
             string_list[l][k]=" "
 for i in string_list:
     print("".join(i))
+================================================================================
+number=int(input())
+answer_list=[["*"]*number for i in range(number)]
+def recycle(num,x,y):
+    global answer_list
+    if num==1:
+        return
+    for i in answer_list[x-int(num*(2/3)):x-int(num*(1/3))]:
+        i[y-int(num*(2/3)):y-int(num*(1/3))]=" "*(num//3)
+    for l in range(num//(num//3)):
+        for k in range(num//(num//3)):
+            recycle(num//3,x-l*(num//3),y-k*(num//3))
+recycle(number,number,number)
+for l in answer_list:
+    print("".join(l))
