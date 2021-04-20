@@ -78,6 +78,17 @@ else:
 string=input().split()
 print(len(string))
 ==================================================================
+#7번 
+==================================================================
+N,M=list(map(list,input().split()))
+N.reverse()
+M.reverse()
+first="".join(N)
+second="".join(M)
+if int(first)>int(second):
+	print(first)
+else:
+	print(second)
 #8번 문제
 ==================================================================
 def change(number):
