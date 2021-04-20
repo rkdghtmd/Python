@@ -1,0 +1,23 @@
+================================================================
+#1번 문제
+================================================================
+N,M = map(int,input().split())
+check_list=[False] * N
+answer_list=[]
+number_list=[i for i in range( 1, N+1) ]
+def function(number):
+    if number==M:
+        print(*answer_list)
+        return
+    for i in range(N):
+        if check_list[i]:
+            continue
+        check_list[i]=True
+        answer_list.append(number_list[i])
+        function(number+1)
+        answer_list.pop()
+        check_list[i]=False
+function(0)
+================================================================
+#2번 문제
+================================================================
