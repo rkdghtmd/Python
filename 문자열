@@ -28,6 +28,31 @@ number=int(input())
 string=input()
 print(sum(list(map(int,list(string)))))
 ==================================================================
+#4번문제
+==================================================================
+import sys
+number=int(sys.stdin.readline())
+number_list=[]
+for i in range(number):
+    number_list.append(int(sys.stdin.readline()))
+number_list.sort()
+from collections import Counter
+print(round(sum(number_list)/number))
+print(number_list[(len(number_list))//2])
+if len(number_list)==1:
+    print(number_list[0])
+    print(0)
+
+else:    
+    mode_dict=Counter(number_list).most_common()
+    if mode_dict[0][1]==mode_dict[1][1]:
+        print(mode_dict[1][0])
+        print(number_list[-1]-number_list[0])
+    else:
+        print(mode_dict[0][0])
+        print(number_list[-1]-number_list[0])
+        
+==================================================================
 #5번 문제
 ==================================================================
 string=list(input().upper())
