@@ -42,7 +42,17 @@ print(n_list)
 ======================================================
 #2번 문제
 ======================================================
-
+#3번 
+======================================================
+import sys
+number=int(input())
+check_list=[0]*10001
+for i in range(number):
+    check_list[int(sys.stdin.readline())]+=1
+for i in range(10001):
+    if check_list[i]!=0:
+        for l in range(check_list[i]):
+            print(i)
 ======================================================
 #5번 문제
 ======================================================
@@ -52,4 +62,9 @@ number.sort(-1)
 number.reverse()
 for i in number:
     print(i,end="")    
-   
+======================================================
+number_list=input()
+number_list=list(number_list)
+number_list.sort()
+number_list.reverse()
+print("".join(number_list))
