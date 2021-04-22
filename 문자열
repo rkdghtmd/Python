@@ -147,7 +147,22 @@ print(len(string))
 ==================================================================
 #10번 
 ==================================================================
-
+number=int(input())
+count=0
+for i in range(number):
+    string=input()
+    if len(string)==1:
+        count+=1
+    for l in range(len(string)-1):
+        if l == len(string)-2:
+            count+=1
+        if string[l]==string[l+1]:
+            continue
+        elif string[l] in string[l+1:]:
+            break
+        
+print(count)
+==================================================================
 number=int(input())
 answer=0
 for i in range(number):
