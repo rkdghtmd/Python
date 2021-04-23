@@ -30,6 +30,15 @@ while not 3*(n-1)*n<-1+N<=3*(n)*(n-1)+6*n:
         break
     n+=1
 print(n+1)
+==============================================================================
+import sys
+number=int(sys.stdin.readline())
+times=1
+start=1
+while number>times:
+    times+=start*6
+    start+=1
+print(start)
 
 ==============================================================================
 #4번 문제
