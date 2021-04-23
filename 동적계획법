@@ -16,3 +16,17 @@ def function(number):
 number = int( input () )
 for i in range(number):
     function(int(input()))
+============================================================
+#4번 문제
+============================================================
+    def function(num):
+    number_list=[1,1,1,2,2,3,4,5,7,9]
+    if num<11:
+        print(number_list[num-1])
+    else:
+        for i in range(num-10):
+            number_list.append(number_list[i+9]+number_list[i+5])
+        print(number_list[-1])
+number=int(input())
+for i in range(number):
+    function(int(input()))
