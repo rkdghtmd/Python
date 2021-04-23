@@ -6,6 +6,17 @@ if number[2]-number[1]>0:
     print(number[0]//(number[2]-number[1])+1)
 else:
   print("-1")
+======================================================================================
+  import sys
+number_list=list(map(int,sys.stdin.readline().split()))
+try:
+    bep=number_list[0]/(number_list[2]-number_list[1])
+    if bep>0:
+        print(int(bep)+1)
+    else:
+        print("-1")
+except:
+    print("-1")
 ==============================================================================
 #2번 
 ==============================================================================
