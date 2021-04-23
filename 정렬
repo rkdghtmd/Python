@@ -79,3 +79,19 @@ for i in range(number):
 number_list=sorted(number_list)
 for i in range(len(number_list)):
     print(*number_list[i])
+
+======================================================
+#7 번 문제
+======================================================
+import sys
+number = int ( sys.stdin.readline())
+number_list = []
+for i in range(number):
+    number_list.append(list(map(int,sys.stdin.readline().split())))
+for i in range(len(number_list)):
+    number_list[i].reverse()
+number_list = sorted(number_list)
+for i in range(len(number_list)):
+    number_list[i].reverse()
+for i in range(len(number_list)):
+    print(*number_list[i])
