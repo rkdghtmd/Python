@@ -17,6 +17,21 @@ number = int( input () )
 for i in range(number):
     function(int(input()))
 ============================================================
+#3번 문제
+import sys
+first=1
+second=2
+answer=0
+number=int(sys.stdin.readline())
+if number == 1 or number ==2:
+    print(number)
+else:
+    for i in range(number-2):
+        tmp=first
+        first=second
+        second=(second+tmp)%15746
+    print(second)
+============================================================
 #4번 문제
 ============================================================
     def function(num):
