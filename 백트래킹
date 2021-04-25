@@ -57,7 +57,29 @@ def function(number):
         function(number+1)
         answer_list.pop()
 function(0)
-
+===================================================
+#4번 문제
+===================================================
+N,M=list(map(int,input().split()))
+number_list=[i+1 for i in range(N)]
+check_list=[False]*N
+answer_list=[]
+def function(number):
+    if number==M:
+        print(*answer_list)
+        return
+    for i in range(N):
+        if check_list[i]:
+            continue
+        for l in range(i):
+            check_list[l]=True
+        answer_list.append(number_list[i])
+        function(number+1)
+        check_list[i]=False
+        answer_list.pop()
+        for l in range(i+1,N):
+            check_list[l]=False
+function(0)
 ===================================================
 ===================================================
 ===================================================
