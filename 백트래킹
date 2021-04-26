@@ -81,6 +81,27 @@ def function(number):
             check_list[l]=False
 function(0)
 ===================================================
+#5번 문제
+===================================================
+count=0
+number=int(input())
+row_list=[False]*number
+cross1_list=[False]*(2*number-1)
+cross2_list=[False]*(2*number-1)
+def function(num):
+    global count
+    if num==number:
+        count+=1
+        return
+    for i in range(number):
+        if  row_list[i] or  cross1_list[i+num] or cross2_list[num+number-i-1]:
+            continue
+        row_list[i]=cross1_list[i+num]=cross2_list[num+number-i-1]=True
+        function(num+1)
+        row_list[i]=cross1_list[i+num]=cross2_list[num+number-i-1]=False
+function(0)
+print(count)
+===================================================
 ===================================================
 ===================================================
 ===================================================
