@@ -262,3 +262,23 @@ def function(number):
         for l in range(i+1,N):
             check_list[l]=False
 function(0)
+============================================
+#15665번 문제
+============================================
+N,M=list(map(int,input().split()))
+number_list=sorted(list(map(int,input().split())))
+answer_list=[]
+check_list=[False]*N
+def function(number):
+    if number==M:
+        print(*answer_list)
+        return
+    last=0
+    for i in range(N):
+        if check_list[i] or number_list[i]==last:
+            continue
+        last=number_list[i]
+        answer_list.append(number_list[i])
+        function(number+1)
+        answer_list.pop()
+function(0)
