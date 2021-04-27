@@ -86,6 +86,16 @@ for i in range(N):
 for i in a_list:
     print(i)
 =============================================================================
+for i in range(int(input())):
+    number_list=list(map(int,input().split()))
+    first=number_list[2]%number_list[0]
+    if first==0:
+        first=number_list[0]
+    second=number_list[2]//number_list[0]
+    if number_list[2]%number_list[0] !=0:
+        second+=1
+    print(str(first)+str(second).zfill(2))
+=============================================================================
 #6번 문제
 =============================================================================
 number=int(input())
@@ -97,6 +107,8 @@ for i in range(number):
         for t in range(room-1):
             room_list[t+1]+=room_list[t]
     print(room_list[room-1])    
+
+=============================================================================
 #7번 문제
 =============================================================================
 number=int(input())
