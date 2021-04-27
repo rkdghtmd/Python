@@ -41,6 +41,22 @@ while number>times:
 print(start)
 
 ==============================================================================
+#3
+==============================================================================
+number=int(input())
+start=1
+while 1:
+    if start*(start+1)//2 < number:
+        start+=1
+    else:
+        sequence=number-(start-1)*start//2
+        if start%2!=0:
+            print(str(start-sequence+1)+"/"+str(sequence))
+            break
+        else:
+            print(str(sequence)+"/"+str(start-sequence+1))
+            break
+==============================================================================
 #4번 문제
 ==============================================================================
 import sys
