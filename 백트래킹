@@ -282,3 +282,34 @@ def function(number):
         function(number+1)
         answer_list.pop()
 function(0)
+============================================
+#6603번 문제
+============================================
+
+number_list=list(map(int,input().split()))
+N=number_list[0]
+number_list=number_list[1:]
+check_list=[False]*N
+answer_list=[]
+def function(number):
+    if number==6:
+        print(*answer_list)
+        return
+    for i in range(len(number_list)):
+        if check_list[i]:
+            continue
+        check_list[i]=True
+        answer_list.append(number_list[i])
+        function(number+1)
+        answer_list.pop()
+        for l in range(i+1,N):
+            check_list[l]=False
+while N != 0:
+    function(0)    
+    number_list=list(map(int,input().split()))
+    N=number_list[0]
+    number_list=number_list[1:]
+    check_list=[False]*N
+    answer_list=[]
+    if N != 0:
+        print('')
