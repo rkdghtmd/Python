@@ -22,3 +22,15 @@ for i in range(len(number_list)):
     for l in range(i+1):
         answer+=number_list[l]
 print(answer)
+=========================================================
+#4번 문제
+=========================================================
+answer_list=input().split("-")
+def function(case_list):
+    case_list=list(map(int,case_list.split("+")))
+    case_list=sum(case_list)
+    return case_list
+answer_list=list(map(function,answer_list))
+answer_list=list(map(int,answer_list))
+answer_number=answer_list[0]-sum(answer_list[1:])
+print(answer_number)
