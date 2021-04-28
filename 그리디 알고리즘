@@ -1,0 +1,14 @@
+=========================================================
+#1번 문제
+=========================================================
+N,M=list(map(int,input().split()))
+number_list=[int(input())for i in range(N)]
+number_list.reverse()
+answer=0
+count=0
+for i in number_list:
+    if M//i==0:
+        continue
+    answer+=M//i
+    M=M%i
+print(answer)
