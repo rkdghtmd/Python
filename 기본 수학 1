@@ -127,8 +127,8 @@ if len(c_list)!=0:
 else:
     print("-1")
     number=int(input())
-fivestart=number//5
 =============================================================================
+fivestart=number//5
 for i in range(fivestart,-1,-1):
     goal=number
     goal-=5*i
@@ -137,7 +137,17 @@ for i in range(fivestart,-1,-1):
         break
     if i == 0:
         print(-1)
-
+=============================================================================
+number=int(input())
+answer=0
+while 1:
+    if number%5 == 0:
+        print(answer+number//5)
+        break
+    answer+=1
+    number-=3
+else:
+    print(-1)
 =============================================================================
 #8번 문제
 ==============================================================================
