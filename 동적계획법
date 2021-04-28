@@ -91,3 +91,17 @@ answer_list=[number_list[0]]
 for i in range(len(number_list)-1):
     answer_list.append(max(answer_list[i]+number_list[i+1],number_list[i+1]))
 print(max(answer_list))
+============================================================
+#11726번 문제
+============================================================
+def function(number):
+    number_list=[1,1]
+    if number==1:
+        print(1)
+    elif number==2:
+        print(2)
+    else:
+        for i in range(number-1):
+            number_list.append((number_list[i]+number_list[i+1])%10007)
+        print(number_list[-1])
+function(int(input()))
