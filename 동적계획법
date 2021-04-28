@@ -105,3 +105,18 @@ def function(number):
             number_list.append((number_list[i]+number_list[i+1])%10007)
         print(number_list[-1])
 function(int(input()))
+============================================================
+#11727번 문제
+============================================================
+
+def function(number):
+    number_list=[1,3]
+    if number==1:
+        print(1)
+    elif number==2:
+        print(3)
+    else:
+        for i in range(number-2):
+            number_list.append((2*number_list[i]+number_list[i+1])%10007)
+        print(number_list[-1])
+function(int(input()))
