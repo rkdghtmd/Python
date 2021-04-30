@@ -17,6 +17,22 @@ for i in string:
         zero+=1
 print(zero)  
 ===========================================
+number=int(input())
+number_list=list(map(int,input().split()))
+answer=0
+for i in number_list:
+    if i == 1:
+        continue
+    if i == 2:
+        answer+=1
+        continue
+    for l in range(2,i):
+        if i%l == 0:
+            break
+        if l == i-1:
+            answer+=1
+print(answer)
+===========================================
 #2번 
 ===========================================
 def function (num1,num2):
