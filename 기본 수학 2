@@ -52,12 +52,31 @@ def function (num1,num2):
         print(min(a_list))
     else:
         print('-1')
+===========================================
 number1=int(input())
 number2=int(input())
 if number1 == 1 :
     function(number1+1,number2)
 else:
     function(number1,number2)
+===========================================
+answer_list=[2,3]
+case_list=[]
+for i in range(3,10000):
+    for l in range(2,int(i**0.5)+1):
+        if i%l == 0:
+            break
+        if l ==int(i**0.5):
+            answer_list.append(i)
+number_list=[int(input()) for i in range(2)]
+for i in range(number_list[0],number_list[1]+1):
+    if i in answer_list:
+        case_list.append(i)        
+if len(case_list)==0:
+    print(-1)
+else:
+    print(sum(case_list))
+    print(min(case_list))
 ===========================================
 #3번 문제
 ===========================================
