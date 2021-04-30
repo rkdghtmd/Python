@@ -78,3 +78,21 @@ number=int(input())
 for i in range(number):
     K,N=list(map(int,input().split()))
     print(factorial(N)//(factorial(K)*factorial(N-K)))
+=======================================================================
+#11번 문제
+=======================================================================
+    number=int(input())
+answer=0
+def function(number):
+    if number == 0 :
+        return 1
+    return (number)*function(number-1)
+def function2(number):
+    global answer
+    if number%10 == 0:
+        answer+=1
+        return function2(number//10)
+    else:
+        return
+function2(function(number))
+print(answer)
