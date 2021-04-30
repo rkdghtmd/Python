@@ -313,3 +313,29 @@ while N != 0:
     answer_list=[]
     if N != 0:
         print('')
+============================================
+#15666번 문제
+============================================
+N,M=list(map(int,input().split()))
+number_list=sorted(list(map(int,input().split())))
+check_list=[False]*N
+answer_list=[]
+def function(number):
+    if number == M:
+        print(*answer_list)
+        return
+    last=0
+    for i in range(N):
+        if check_list[i]:
+            continue
+        if last==number_list[i]:
+            continue
+        last=number_list[i]
+        for l in range(i):
+            check_list[l]=True
+        answer_list.append(number_list[i])
+        function(number+1)
+        answer_list.pop()
+        for l in range(i+1,N):
+            check_list[l]=False
+function(0)
