@@ -114,3 +114,15 @@ for i in range(len(word_list)):
 member_list.sort(key = lambda word: (int(word[0]),word[2]))
 for i in range(len(member_list)):
     print(member_list[i][0],member_list[i][1])
+======================================================
+#10    
+======================================================
+number_list=[list(map(int,input().split())) for i in range(int(input()))]
+number_list.sort(key=lambda word: (word[1],word[0]))
+answer=0
+point=0
+for first,second in number_list:
+    if first >= point:
+        answer+=1
+        point=second
+print(answer)
