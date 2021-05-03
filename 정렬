@@ -107,3 +107,10 @@ for i in range(len(word_list)):
 word_list=sorted(word_list,key= lambda word : (word[1],word[0]))
 for i in range(len(word_list)):
     print(word_list[i][0])
+======================================================
+#9번 
+======================================================
+    member_list=[input().split() +[i] for i in range ( int(input()))]
+member_list.sort(key = lambda word: (int(word[0]),word[2]))
+for i in range(len(member_list)):
+    print(member_list[i][0],member_list[i][1])
