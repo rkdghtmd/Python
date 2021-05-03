@@ -19,6 +19,22 @@ print(zero)
 ===========================================
 number=int(input())
 number_list=list(map(int,input().split()))
+answer_list=[]
+for i in number_list:
+    if i == 1:
+        continue
+    if i ==2 or i ==3:
+        answer_list.append(i)
+        continue
+    for l in range(2,int(i**0.5)+2):
+        if i%l ==0:
+            break
+        if l == int(i**0.5)+1:
+            answer_list.append(i)
+print(len(answer_list))
+===========================================
+number=int(input())
+number_list=list(map(int,input().split()))
 answer=0
 for i in number_list:
     if i == 1:
