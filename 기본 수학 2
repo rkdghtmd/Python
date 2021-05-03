@@ -182,6 +182,21 @@ for i in b_list:
 
 print(answer[0],answer[1])
 ===========================================
+x_list=[]
+y_list=[]
+answer_list=[]
+for i in range(3):
+    first,second=list(map(int,input().split()))
+    x_list.append(first)
+    y_list.append(second)
+for i in set(x_list):
+    if x_list.count(i)==1:
+        answer_list.append(i)
+for i in set(y_list):
+    if y_list.count(i)==1:
+        answer_list.append(i)
+print(*answer_list)
+==============================================
 #9번 문제
 ==============================================
 def pita (first,second,third):
