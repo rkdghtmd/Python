@@ -95,3 +95,15 @@ for i in range(len(number_list)):
     number_list[i].reverse()
 for i in range(len(number_list)):
     print(*number_list[i])
+======================================================
+#8번 문제
+======================================================
+word_list=[]
+for i in range(int(input())):
+    word_list.append(input())
+word_list=list(set(word_list))
+for i in range(len(word_list)):
+    word_list[i]=(word_list[i],len(word_list[i]))
+word_list=sorted(word_list,key= lambda word : (word[1],word[0]))
+for i in range(len(word_list)):
+    print(word_list[i][0])
