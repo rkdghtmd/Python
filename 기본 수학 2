@@ -207,6 +207,15 @@ while pita(N[0],N[1],N[2]) != 5:
         print("wrong")    
     N=list(map(int,input().split()))
 ===========================================
+number_list=list(map(int,input().split()))
+while number_list!=[0,0,0]:
+    number_list.sort()
+    if number_list[2]**2==number_list[1]**2+number_list[0]**2:
+        print("right")
+    else:
+        print("wrong")
+    number_list=list(map(int,input().split()))
+===========================================
 #10번 문제
 ===========================================
 import math
