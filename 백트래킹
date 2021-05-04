@@ -339,3 +339,28 @@ def function(number):
         for l in range(i+1,N):
             check_list[l]=False
 function(0)
+============================================
+#14888번
+============================================
+number=int(input())
+number_list=list(map(int,input().split()))
+calculate_list=list(map(int,input().split()))
+maximum=-1e9
+minimum=1e9
+def function(countnumber,answer,plus,minus,times,quotient):
+    global maximum,minimum
+    if countnumber==number:
+        maximum=max(maximum,answer)
+        minimum=min(minimum,answer)
+        return
+    if plus>0:
+        function(countnumber+1,answer+number_list[countnumber],plus-1,minus,times,quotient)
+    if minus>0:
+        function(countnumber+1,answer-number_list[countnumber],plus,minus-1,times,quotient)
+    if times>0:
+        function(countnumber+1,answer*number_list[countnumber],plus,minus,times-1,quotient)
+    if quotient>0:
+        function(countnumber+1, answer//number_list[countnumber] if answer > 0 else -((-answer)//number_list[countnumber]), plus, minus, times, quotient-1)
+function(1,number_list[0],calculate_list[0],calculate_list[1],calculate_list[2],calculate_list[3])
+print(maximum)
+print(minimum)
