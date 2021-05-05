@@ -121,7 +121,8 @@ def function(number):
         print(number_list[-1])
 function(int(input()))
 ============================================================
-#1463
+#1463번 문제
+============================================================
 number=int(input())
 dynamic_list=[0 for i in range( number+1)]
 dynamic_list[0]=-1
@@ -136,4 +137,21 @@ def dynamic_program(number):
             answer_list.append(dynamic_list[i//3]+1)
     dynamic_list[i]=min(answer_list)
 dynamic_program(number)
+============================================================
+#1890번 문제
+============================================================
 print(dynamic_list[number])
+number=int(input())
+number_list=[list(map(int,input().split())) for i in range(number)]
+case_list=[[0 for i in range(number)] for i in range(number)]
+case_list[number-1][number-1]=1
+for i in range(number-1,-1,-1):
+    for l in range(number-1,-1,-1):
+        if number_list[i][l]==0:
+            continue
+        num=number_list[i][l]
+        if i+num <number:
+            case_list[i][l]+=case_list[i+num][l]
+        if l+num <number:
+            case_list[i][l]+=case_list[i][l+num]
+print(case_list[0][0])
