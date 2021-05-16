@@ -142,7 +142,7 @@ def dfs(count):
     if count==len(case_list):
         for row in number_list:
             print(*row)
-        return
+        quit()
     first,second=case_list[count]
     answer=possible(first,second)
     for k in answer:
