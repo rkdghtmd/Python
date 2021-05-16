@@ -128,3 +128,11 @@ for first,second in number_list:
         answer+=1
         point=second
 print(answer)
+======================================================
+import sys
+number=int(sys.stdin.readline())
+number_list=list(map(int,sys.stdin.readline().split()))
+number_set=sorted(list(set(number_list)))
+dicitonary={number_set[i] : i for i in range(len(number_set))}
+for i in number_list:
+    print(dicitonary[i],end=" ")
