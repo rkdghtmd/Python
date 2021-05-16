@@ -102,6 +102,54 @@ def function(num):
 function(0)
 print(count)
 ===================================================
+#6번 문제
+===================================================
+number_list=[]
+case_list=[]
+for i in range(9):
+    number_list.append(list(map(int,input().split())))
+for i in range(9):
+    for l in range(9):
+        if number_list[i][l]==0:
+            case_list.append((i,l))
+check_list=[False]*9
+def three(x,y):
+    x=(x//3)*3
+    y=(y//3)*3
+    for i in range(3):
+        for l in range(3):
+            if number_list[x+i][y+l]==0:
+                continue
+            check_list[number_list[x+i][y+l]-1]=True
+def row(x,y):
+    for i in range(9):
+        if number_list[x][i]!=0:
+            check_list[number_list[x][i]-1]=True
+        if number_list[i][y]!=0:
+            check_list[number_list[i][y]-1]=True
+def possible(x,y):
+    global check_list
+    answer_list=[]
+    row(x,y)
+    three(x,y)
+    for i in range(9):
+        if check_list[i]:
+            continue
+        answer_list.append(i+1)
+    check_list=[False]*9
+    return answer_list
+def dfs(count):
+    if count==len(case_list):
+        for row in number_list:
+            print(*row)
+        return
+    first,second=case_list[count]
+    answer=possible(first,second)
+    for k in answer:
+        number_list[first][second]=k
+        dfs(count+1)
+        number_list[first][second]=0
+dfs(0)
 ===================================================
 ===================================================
 ===================================================
