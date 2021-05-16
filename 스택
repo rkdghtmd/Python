@@ -39,4 +39,14 @@ for i in range(int(sys.stdin.readline())):
     elif answer[0]=="pop":
         a.pop()
 ==================================================================
-        
+#2번 문제
+==================================================================
+import sys
+number_list=[]
+for i in range(int(sys.stdin.readline())):
+    number=int(sys.stdin.readline())
+    if number == 0:
+        number_list.pop()
+    else:
+        number_list.append(number)
+print(sum(number_list))
