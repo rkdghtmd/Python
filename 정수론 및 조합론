@@ -76,6 +76,13 @@ def factorial(n):
     return n*factorial(n-1)
 print(factorial(N)//(factorial(K)*factorial(N-K)))
 =======================================================================
+#8번 문제
+=======================================================================
+import math
+N,K=list(map(int,input().split()))
+number=(math.factorial(N)//(math.factorial(K)*math.factorial(N-K)))
+print(number%10007)
+=======================================================================
 #9번 문제
 =======================================================================
 def factorial(n):
