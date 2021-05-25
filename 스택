@@ -50,3 +50,23 @@ for i in range(int(sys.stdin.readline())):
     else:
         number_list.append(number)
 print(sum(number_list))
+==================================================================
+#3번 문제
+==================================================================
+def function(string):
+    string_list=list(string)
+    string_list.reverse()
+    sum=0
+    for i in string_list:
+        if i == ")":
+            sum+=1
+        else:
+            sum-=1
+        if sum<0:
+            return print("NO")
+    if sum==0:
+        return print("YES")
+    else:
+        return print("NO")
+for i in range(int(input())):
+    function(input())
