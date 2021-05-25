@@ -114,6 +114,20 @@ if number>2:
         answer_list[i]=max(answer_list[i-3]+number_list[i-1]+number_list[i],number_list[i]+answer_list[i-2])
 print(answer_list[number-1])
 ============================================================
+#9번 
+============================================================
+number_list=[0]+[1 for i in range(9)]
+number=int(input())
+for i in range(number-1):
+    check_list=number_list[:]
+    for l in range(10):
+        if l == 0:
+            number_list[l]=(check_list[l+1]%1000000000)
+        elif l == 9:
+            number_list[l]=(check_list[l-1]%1000000000)
+        else:
+            number_list[l]=(check_list[l+1]+check_list[l-1])%1000000000
+print(sum(number_list)%1000000000)
 ============================================================
 ============================================================
 ============================================================
