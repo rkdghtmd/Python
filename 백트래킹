@@ -390,6 +390,32 @@ function(0)
 ============================================
 #14888번
 ============================================
+num = int(input())
+number_list = list(map(int,input().split()))
+case_list= list(map(int,input().split()))
+maxnumber=-1e9
+minnumber=1e9
+def function(number,count,fir,sec,thr,fou):
+    global answer,minnumber,maxnumber
+    if count==num-1:
+        minnumber=min(minnumber,number)
+        maxnumber=max(maxnumber,number)
+        return     
+    if fir !=0 :
+        function(number+number_list[count+1],count+1,fir-1,sec,thr,fou)
+    if sec !=0 :
+        function(number-number_list[count+1],count+1,fir,sec-1,thr,fou)
+    if thr !=0 :
+        function(number*number_list[count+1],count+1,fir,sec,thr-1,fou)
+    if fou !=0 :
+        if number < 0 :
+            function(-(abs(number)//number_list[count+1]),count+1,fir,sec,thr,fou-1)
+        else:
+            function(number//number_list[count+1],count+1,fir,sec,thr,fou-1)
+function(number_list[0],0,case_list[0],case_list[1],case_list[2],case_list[3])
+print(maxnumber)
+print(minnumber)
+============================================
 number=int(input())
 number_list=list(map(int,input().split()))
 calculate_list=list(map(int,input().split()))
