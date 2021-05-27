@@ -147,6 +147,17 @@ if number >3:
         check_list.append(max(check_list[i+2],check_list[i]+number_list[i+2]+number_list[i+3],check_list[i+1]+number_list[i+3]))
 print(max(check_list))
 ============================================================
+#11
+============================================================
+number = int(input())
+number_list = list(map(int,input().split()))
+dp = [ 0 for i in range(number)]
+for i in range(number):
+	for l in range(i):
+		if dp[i] < dp[l] and number_list[i] > number_list[l]:
+			dp[i] = dp[l]
+	dp[i]=dp[i]+1
+print(max(dp))
 ============================================================
 ============================================================
 ============================================================
