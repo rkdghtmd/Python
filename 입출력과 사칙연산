@@ -38,3 +38,5 @@ print('''
 a=int(input())
 b=int(input())
 print(a+b)
+================================================================
+print(sum(list(map(int,input().split()))))
