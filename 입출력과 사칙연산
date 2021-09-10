@@ -55,3 +55,13 @@ print(int(a)*int(b))
 ================================================================
 a,b=input().split()
 print(int(a)/int(b))
+================================================================
+#9번 문제
+================================================================
+number_list=list(map(int,input().split()))
+print(number_list[0]+number_list[1])
+print(number_list[0]-number_list[1])
+print(number_list[0]*number_list[1])
+print(number_list[0]//number_list[1])
+print(number_list[0]%number_list[1])
+
