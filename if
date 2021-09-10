@@ -13,8 +13,13 @@ except:
 #2번 문제
 ================================================================
 number=int(input())
-if number==100:
+if 90<=number<=100:
     print("A")
-    exit()
-number=number//10
-print(chr(74-number))
+elif 80<=number<90:
+    print("B")
+elif 70<=number<80:
+    print("C")
+elif 60<=number<70:
+    print("D")
+else:
+    print("F")
