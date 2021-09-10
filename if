@@ -44,3 +44,12 @@ elif a<0 and b<0:
     print(3)
 else:
     print(4)
+================================================================
+#5번 문제
+================================================================
+hour,minute=list(map(int,input().split()))
+time=60*hour+minute
+time-=45
+if time<0:
+    time+=1440
+print(time//60,time%60)
