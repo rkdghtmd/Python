@@ -64,4 +64,11 @@ print(number_list[0]-number_list[1])
 print(number_list[0]*number_list[1])
 print(number_list[0]//number_list[1])
 print(number_list[0]%number_list[1])
-
+================================================================
+#10번 문제
+================================================================
+A,B,C=list(map(int,input().split()))
+print((A+B)%C)
+print(((A%C) + (B%C))%C)
+print((A*B)%C)
+print(((A%C) * (B%C))%C)
