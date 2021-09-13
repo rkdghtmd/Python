@@ -67,3 +67,12 @@ for i in range(1,1+number):
 number = int (input())
 for i in range(1,1+number):
     print(" "*(number-i)+"*"*i)
+===========================================================================
+#11
+===========================================================================
+number,count=list(map(int,input().split()))
+case_list=input().split()
+for i in case_list:
+    if int(i)<count:
+        print(i,end=" ")
+print("")
