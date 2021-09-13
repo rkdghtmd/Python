@@ -41,3 +41,10 @@ for i in range(1,number+1);
 number=int(input())
 for i in range(number,0,-1):
     print(i)
+===========================================================================
+#7번 문제
+===========================================================================
+number=int(input())
+for i in range(1,1+number):
+    a,b=list(map(int,input().split()))
+    print("Case #{}: {}".format(i,a+b))
