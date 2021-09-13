@@ -55,3 +55,9 @@ number = int (1,1+input())
 for i in range(number):
     a,b=list(map(int,input().split()))
     print("Case #{}: {} + {} = {}".format(i,a,b,a+b))
+===========================================================================
+#9번 문제
+===========================================================================
+number = int (input())
+for i in range(1,1+number):
+    print("*"*i)
