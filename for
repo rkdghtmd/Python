@@ -76,3 +76,11 @@ for i in case_list:
     if int(i)<count:
         print(i,end=" ")
 print("")
+===========================================================================
+number,count=list(map(int,input().split()))
+case_list=input().split()
+answer_list=[]
+for i in case_list:
+    if int(i)<count:
+        answer_list.append(i)
+print(" ".join(answer_list))
