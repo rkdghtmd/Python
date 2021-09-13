@@ -48,3 +48,10 @@ number=int(input())
 for i in range(1,1+number):
     a,b=list(map(int,input().split()))
     print("Case #{}: {}".format(i,a+b))
+===========================================================================
+#8
+===========================================================================
+number = int (1,1+input())
+for i in range(number):
+    a,b=list(map(int,input().split()))
+    print("Case #{}: {} + {} = {}".format(i,a,b,a+b))
