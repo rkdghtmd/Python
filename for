@@ -32,9 +32,6 @@ for i in range(number):
 ===========================================================================
 #5번 문제
 ===========================================================================
-import sys
-
-number=int(sys.stdin.readline())
-for i in range(number):
-    a,b=list(map(int,sys.stdin.readline().split()))
-    print(a+b)
+number=int(input())
+for i in range(1,number+1);
+    print(i)
