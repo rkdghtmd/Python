@@ -25,6 +25,12 @@ for i in range(9):
 print(max(number_list))
 print(number_list.index(max(number_list))+1)
 =====================================================
+case_list=[]
+for i in range(9):
+    case_list.append(int(input()))
+print(max(case_list))
+print(case_list.index(max(case_list))+1)
+=====================================================
 #3번 문제
 =====================================================
 a = int(input())
