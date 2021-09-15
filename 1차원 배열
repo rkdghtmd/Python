@@ -54,6 +54,18 @@ number_list=list(map(int,input().split()))
 number_list=[i/max(number_list)*100 for i in number_list]
 print(sum(number_list)/number)
 =====================================================
+asdf=int(input())
+case_list=list(map(int,input().split()))
+weight=100/max(case_list)
+print(case_list)
+def weight_function(number):
+    global weight
+    return  number*weight
+answer_list=list(map(weight_function,case_list))
+print(sum(answer_list)/len(answer_list))
+    
+
+=====================================================
 #6번 문제
 =====================================================
 number=int(input())
