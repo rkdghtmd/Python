@@ -5,6 +5,18 @@ number = int(input())
 number_list=list(map(int,input().split()))
 print(min(number_list),max(number_list))
 =====================================================
+number=int(input())
+case_list=list(map(int,input().split()))
+
+number_min=100000000
+number_max=0
+for i in range(number):
+    if number_min>case_list[i]:
+        number_min=case_list[i]
+    if number_max<case_list[i]:
+        number_max=case_list[i]
+print(number_min,number_max)
+=====================================================
 #2번 문제
 =====================================================
 number_list=[]
