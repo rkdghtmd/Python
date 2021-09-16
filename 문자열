@@ -53,6 +53,15 @@ else:
     else:
         print(mode_dict[0][0])
         print(number_list[-1]-number_list[0])
+	
+==================================================================
+number=int(input())
+for i in range(number):
+    weight,case=input().split()
+    weight=int(weight)
+    for i in case:
+        print(i*weight,end="")
+    print('')
         
 ==================================================================
 #5번 문제
