@@ -1,23 +1,15 @@
 ==========================================================================
 #1번 문제
 ==========================================================================
+def solve(a):
+    return sum(a)
 
-number=int(input())
-a_list=[]
-for i in range(number):
-    a_list.append(int(input()))
-a_list.sort()
-for i in range(len(a_list)):
-    print(a_list[i])
-a_set=set()
-b_list=[]
-for i in range(1,100):
-    a_set.add(i)
-for i in range(10):
-    for l in range(5):
-        number=int(str(i)+str(i+l)+str(i+l+l))
-        if 0<number<1000:
-            a_set.add(number)
+==========================================================================
+def function(case_list):
+    for i in case_list:
+        answer+=i
+        
+    return answer
 ==========================================================================
 #2번 문제
 ==========================================================================
