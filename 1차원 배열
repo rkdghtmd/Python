@@ -126,3 +126,18 @@ for i in range(number):
             count+=1 
     N=count/len(string[1:])*100
     print(f'{N:.3f}%')
+=====================================================
+number=int(input())
+if number==1:
+    number=input()
+    print("100.000%")
+    exit()
+for i in range(number):
+    point=0
+    number_list=list(map(int,input().split()))
+    number_avg=sum(number_list[1:])/len(number_list[1:])
+    for l in number_list[1:]:
+        if l>number_avg:
+            point+=1
+    answer=point/number_list[0]*100
+    print("{:.3f}%".format(answer))
