@@ -112,6 +112,15 @@ for i in range(int(input())):
         second+=1
     print(str(first)+str(second).zfill(2))
 =============================================================================
+for i in range(int(input())):
+    height,floor,answer=map(int,input().split())
+    apart_list=[]
+    for i in range(floor):
+        for l in range(height):
+            number=100*(l+1)+i+1
+            apart_list.append(number)
+    print(apart_list[answer-1])
+=============================================================================
 #6번 문제
 =============================================================================
 number=int(input())
