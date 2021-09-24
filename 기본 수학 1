@@ -132,7 +132,17 @@ for i in range(number):
         for t in range(room-1):
             room_list[t+1]+=room_list[t]
     print(room_list[room-1])    
-
+=============================================================================
+number=int(input())
+for i in range(number):
+    floor =int(input())
+    room = int(input())
+    case_list=[i+1 for i in range(room)]
+    case_list.reverse()
+    for i in range(1,floor+1):
+        for l in range(room):
+            case_list[l]=sum(case_list[l:])
+    print(case_list[0])
 =============================================================================
 #7번 문제
 =============================================================================
