@@ -94,6 +94,32 @@ else:
     print(sum(case_list))
     print(min(case_list))
 ===========================================
+def function(case): #0이면 소수 아님 1이면 소수임
+    if case ==1:
+        return 0
+    elif case ==2 or case == 3:
+        return case
+    else:
+        for i in range(2,int(case**0.5)+2):
+            if case%i==0:
+                return 0
+            if i == int (case**0.5)+1:
+                return case
+a=int(input())
+b=int(input())
+final =0
+answer=0
+for i in range(b,a-1,-1):
+    answer+=function(i)
+    if function(i) !=0:
+        final=i
+
+if answer==0:
+    print(-1)
+else:
+    print(answer)
+    print(final)
+===========================================
 #3번 문제
 ===========================================
 number=int(input())
